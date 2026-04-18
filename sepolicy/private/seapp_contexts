@@ -1,0 +1,3 @@
+#revanced
+user=system seinfo=platform isPrivApp=true name=com.android.revanced domain=revanced_app type=system_app_data_file levelFrom=all
+

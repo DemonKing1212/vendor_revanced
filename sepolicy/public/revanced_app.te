@@ -1,0 +1,2 @@
+type revanced_app, domain;
+typeattribute revanced_app mlstrustedsubject;

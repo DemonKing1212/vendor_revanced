@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2025 kenway214
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">ReVanced</string>
+
+    <string name="revanced_title">ReVanced Manager</string>
+    <string name="revanced_summary">Modified apps with ad-blocking and background playback</string>
+    <string name="revanced_enable_title">Enable ReVanced</string>
+    <string name="revanced_restart_required">Device restart required</string>
+    <string name="revanced_toggle_failed">Failed to toggle ReVanced</string>
+    <string name="revanced_info">ReVanced adds helpful features like ad-blocking, background playback, and more. Includes the latest built-in ReVanced YouTube and YouTube Music. No MicroG is required. Auto-updates are disabled for both apps, and you should not update them from the Play Store. A device reboot is only required if you manually toggle the feature on or off.</string>
+</resources>

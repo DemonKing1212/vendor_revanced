@@ -21,3 +21,6 @@ allow revanced_app system_server:binder { call transfer };
 
 get_prop(revanced_app, revanced_prop)
 set_prop(revanced_app, revanced_prop)
+
+get_prop(system_server, revanced_prop)
+get_prop(appdomain, revanced_prop)

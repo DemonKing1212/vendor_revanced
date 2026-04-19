@@ -8,6 +8,7 @@
     android:sharedUserId="android.uid.system">
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REBOOT" />
     
     <application
         android:allowBackup="true"
@@ -27,7 +28,7 @@
             android:label="@string/revanced_title"
             android:icon="@drawable/youtube_activity_24px"
             android:exported="true"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:theme="@style/Theme.SubSettingsBase.Expressive">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>

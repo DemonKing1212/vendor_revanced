@@ -6,15 +6,34 @@
 package com.android.revanced
 
 import android.os.Bundle
-import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
-import com.android.revanced.R
+import android.os.PowerManager
+import android.content.Context
+import android.widget.Toast
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import com.android.revanced.ui.ReVancedScreen
+import com.android.revanced.ui.ReVancedTheme
 
-class ReVancedActivity : CollapsingToolbarBaseActivity() {
+class ReVancedActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        supportFragmentManager.beginTransaction()
-            .replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame, 
-                ReVancedSettingsFragment())
-            .commit()
+        
+        setContent {
+            ReVancedTheme {
+                ReVancedScreen(
+                    onToggle = { enabled ->
+                        val success = ReVancedManager.setEnabled(enabled)
+                        if (!success) {
+                            Toast.makeText(this, R.string.revanced_toggle_failed, Toast.LENGTH_SHORT).show()
+                        }
+                    },
+                    onReboot = {
+                        val pm = getSystemService(Context.POWER_SERVICE) as PowerManager
+                        pm.reboot(null)
+                    }
+                )
+            }
+        }
     }
 }
